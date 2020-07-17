@@ -1,0 +1,23 @@
+package com.practice.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class indexController {
+	
+	@Autowired
+	Test t;
+	
+	@GetMapping("/index")
+	public @ResponseBody String home() {
+		return "index2";
+	}
+	
+	public @ResponseBody String index() {
+		System.out.println(t.num);
+		return "안녕";
+	}
+}
