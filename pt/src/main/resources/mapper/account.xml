@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spring.pt.repository.AccountRepository">
+	<select id="findAll" resultType="com.spring.pt.model.Account">
+		SELECT * FROM ACCOUNT
+	</select>
+
+	<select id="findByAccountNumber" resultType="com.spring.pt.model.Account">
+		SELECT * FROM ACCOUNT WHERE ACCOUNTNUMBER = #{ACCOUNTNUMBER}
+	</select>
+
+	<update id="update">
+	<!-- #은 myBatis문법임 -->
+		UPDATE ACCOUNT SET MONEY = #{money} WHERE ACCOUNTNUMBER = #{accountNumber}
+	</update>
+</mapper> 
