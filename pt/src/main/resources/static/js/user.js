@@ -51,6 +51,7 @@ let index = {
 			data: JSON.stringify(data),
 			contentType: "application/json; charset=UTF-8",
 			dataType: "json"
+				
 		}).done(function(resp) {
 			if(resp.statusCode == 1) {
 				alert("로그인 성공");
