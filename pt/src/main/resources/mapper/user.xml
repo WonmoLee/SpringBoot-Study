@@ -8,4 +8,8 @@
 		INSERT INTO user(userName, password, email, createDate) VALUES(#{userName}, #{passWord}, #{email}, now())
 	</insert>
 	
+	<select id="login" resultType="com.spring.pt.model.User">
+      	SELECT id, username, email, profile, createDate FROM user WHERE username = #{userName} AND password = #{passWord}
+   	</select>
+	
 </mapper> 
