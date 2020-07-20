@@ -17,7 +17,7 @@
 <body>
 
    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" href="/">LWM Blog</a>
+      <a class="navbar-brand" href="/spring">LWM Blog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
          <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,8 +25,8 @@
       <div class="justify-content-between collapse navbar-collapse" id="collapsibleNavbar">
 
          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="/auth/loginForm">로그인</a></li>
-            <li class="nav-item"><a class="nav-link" href="/auth/joinForm">회원가입</a></li>
+            <li class="nav-item"><a class="nav-link" href="/spring/auth/login">로그인</a></li>
+            <li class="nav-item"><a class="nav-link" href="/spring/auth/join">회원가입</a></li>
          </ul>
       </div>
    </nav>
