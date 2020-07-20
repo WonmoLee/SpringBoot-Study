@@ -20,6 +20,10 @@ let index = {
 			contentType: "application/json; charset=UTF-8",
 			dataType: "json"
 		}).done(function(resp) {
+			if(resp.statusCode == 1) {
+				alert("회원가입이 정상적으로 완료되었습니다.");
+				location.href="/spring";
+			}
 			console.log(resp);
 		}).fail(function(error) {
 			console.log(error);
