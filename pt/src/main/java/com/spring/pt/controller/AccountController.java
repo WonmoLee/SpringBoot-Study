@@ -1,4 +1,4 @@
-package com.spring.pt;
+package com.spring.pt.controller;
 
 import java.util.List;
 
