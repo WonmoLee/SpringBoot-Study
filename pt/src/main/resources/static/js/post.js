@@ -16,25 +16,25 @@ let index = {
 	
 	save: function() {
 		let data = {
-				userName: $("#userName").val(),
-				passWord: $("#passWord").val(),
-				email: $("#email").val()
+				title: $("#title").val(),
+				content: $("#content").val(),
+				userId: $("#userId").val()
 		};
 		
 		$.ajax({
 			type: "POST",
-			url: "/auth/joinProc",
+			url: "/post",
 			data: JSON.stringify(data),
 			contentType: "application/json; charset=UTF-8",
 			dataType: "json"
 		}).done(function(resp) {
 			if(resp.statusCode == 1) {
-				alert("회원가입이 정상적으로 완료되었습니다.");
+				alert("글쓰기 성공");
 				location.href="/";
 			}
 			console.log(resp);
 		}).fail(function(error) {
-			alert("회원가입에 실패하였습니다.");
+			alert("글쓰기 실패");
 			console.log(error);
 		})
 	},

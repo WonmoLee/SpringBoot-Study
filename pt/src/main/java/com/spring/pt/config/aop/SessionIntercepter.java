@@ -23,7 +23,7 @@ public class SessionIntercepter extends HandlerInterceptorAdapter{
 			PrintWriter out = response.getWriter();
 			out.print("<script>");
 			out.print("alert('로그인이 필요합니다.');");
-			out.print("location.href='/spring/auth/loginForm';");
+			out.print("location.href='/auth/loginForm';");
 			out.print("</script>");
 			return false;
 		}

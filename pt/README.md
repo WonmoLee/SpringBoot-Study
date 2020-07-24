@@ -28,7 +28,7 @@ CREATE TABLE user(
     password varchar(100) not null,
     email varchar(100),
     profile varchar(200),
-    role varchar(20),
+    role varchar(40),
     createDate timestamp
 ) engine=InnoDB default charset=utf8;
 
@@ -52,7 +52,8 @@ CREATE TABLE comment(
 ) engine=InnoDB default charset=utf8;
 
 select * from user;
-
-
+select * from post;
 
 update user set role = 'ROLE_ADMIN' where username = 'root';
+
+use spring;
