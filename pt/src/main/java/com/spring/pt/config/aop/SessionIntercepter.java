@@ -27,7 +27,6 @@ public class SessionIntercepter extends HandlerInterceptorAdapter{
 			out.print("</script>");
 			return false;
 		}
-		System.out.println("인증을 체크해야함.");
 		return true;
 	}
 }
