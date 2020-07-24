@@ -18,5 +18,6 @@ public class User {
 	private String passWord;
 	private String email;
 	private String profile;
+	private String role;
 	private Timestamp createDate;
 }

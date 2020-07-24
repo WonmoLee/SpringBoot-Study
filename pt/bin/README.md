@@ -3,9 +3,6 @@ GRANT ALL PRIVILEGES ON *.* TO 'spring'@'%';
 create database spring;
 use spring;
 
-drop table user;
-drop table comment;
-drop table post;
 
 CREATE TABLE account(
 	id int auto_increment primary key,
@@ -28,7 +25,6 @@ CREATE TABLE user(
     password varchar(100) not null,
     email varchar(100),
     profile varchar(200),
-    role varchar(20),
     createDate timestamp
 ) engine=InnoDB default charset=utf8;
 
@@ -50,9 +46,3 @@ CREATE TABLE comment(
     foreign key (userId) references user (id) on delete set null,
     foreign key (postId) references post (id) on delete cascade
 ) engine=InnoDB default charset=utf8;
-
-select * from user;
-
-
-
-update user set role = 'ROLE_ADMIN' where username = 'root';
