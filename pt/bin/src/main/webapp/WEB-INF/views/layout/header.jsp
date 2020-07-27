@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +18,7 @@
 <body>
 
    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" href="/spring">LWM Blog</a>
+      <a class="navbar-brand" href="/posts">LWM Blog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
          <span class="navbar-toggler-icon"></span>
       </button>
@@ -28,13 +29,13 @@
          
          	<c:choose>
          		<c:when test="${empty sessionScope.principal}">
-         			<li class="nav-item"><a class="nav-link" href="/spring/auth/login">로그인</a></li>
-            		<li class="nav-item"><a class="nav-link" href="/spring/auth/join">회원가입</a></li>
+         			<li class="nav-item"><a class="nav-link" href="/auth/loginForm">로그인</a></li>
+            		<li class="nav-item"><a class="nav-link" href="/auth/join">회원가입</a></li>
             	</c:when>
             	<c:otherwise>
-         			<li class="nav-item"><a class="nav-link" href="/spring/post/save">글쓰기</a></li>
-            		<li class="nav-item"><a class="nav-link" href="/spring/user/update">회원수정</a></li>
-            		<li id="btn-logout" class="nav-item"><a class="nav-link" href="/spring/auth/logout">로그아웃</a></li>
+         			<li class="nav-item"><a class="nav-link" href="/post/saveForm">글쓰기</a></li>
+            		<li class="nav-item"><a class="nav-link" href="/user/update">회원수정</a></li>
+            		<li id="btn-logout" class="nav-item"><a class="nav-link" href="/auth/logout">로그아웃</a></li>
          		</c:otherwise>
          	</c:choose>
          	

@@ -23,14 +23,14 @@ let index = {
 		
 		$.ajax({
 			type: "POST",
-			url: "/spring/auth/joinProc",
+			url: "/auth/joinProc",
 			data: JSON.stringify(data),
 			contentType: "application/json; charset=UTF-8",
 			dataType: "json"
 		}).done(function(resp) {
 			if(resp.statusCode == 1) {
 				alert("회원가입이 정상적으로 완료되었습니다.");
-				location.href="/spring";
+				location.href="/";
 			}
 			console.log(resp);
 		}).fail(function(error) {
@@ -47,7 +47,7 @@ let index = {
 		
 		$.ajax({
 			type: "POST",
-			url: "/spring/auth/loginProc",
+			url: "/auth/loginProc",
 			data: JSON.stringify(data),
 			contentType: "application/json; charset=UTF-8",
 			dataType: "json"
@@ -55,7 +55,7 @@ let index = {
 		}).done(function(resp) {
 			if(resp.statusCode == 1) {
 				alert("로그인 성공");
-				location.href="/spring";
+				location.href="/";
 			} else {
 				alert("아이디와 패스워드를 다시 입력하세요.");
 				console.log(resp);

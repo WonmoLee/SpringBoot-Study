@@ -14,14 +14,6 @@ CREATE TABLE account(
     money int
 ) engine=InnoDB default charset=utf8;
 
-insert into account(username, accountNumber,money)
-values('홍길동', '01011112222', 50000);
-
-insert into account(username, accountNumber,money)
-values('장보고', '01033332222', 100000);
-
-commit;
-
 CREATE TABLE user(
 	id int auto_increment primary key,
     username varchar(100) unique not null,
@@ -50,6 +42,15 @@ CREATE TABLE comment(
     foreign key (userId) references user (id) on delete set null,
     foreign key (postId) references post (id) on delete cascade
 ) engine=InnoDB default charset=utf8;
+
+
+insert into account(username, accountNumber,money)
+values('홍길동', '01011112222', 50000);
+
+insert into account(username, accountNumber,money)
+values('장보고', '01033332222', 100000);
+
+commit;
 
 select * from user;
 select * from post;

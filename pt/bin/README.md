@@ -3,6 +3,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'spring'@'%';
 create database spring;
 use spring;
 
+drop table user;
+drop table comment;
+drop table post;
 
 CREATE TABLE account(
 	id int auto_increment primary key,
@@ -25,6 +28,7 @@ CREATE TABLE user(
     password varchar(100) not null,
     email varchar(100),
     profile varchar(200),
+    role varchar(40),
     createDate timestamp
 ) engine=InnoDB default charset=utf8;
 
@@ -46,3 +50,11 @@ CREATE TABLE comment(
     foreign key (userId) references user (id) on delete set null,
     foreign key (postId) references post (id) on delete cascade
 ) engine=InnoDB default charset=utf8;
+
+select * from user;
+select * from post;
+SELECT P.ID, P.TITLE, P.CONTENT, U.USERNAME FROM POST P INNER JOIN USER U ON P.USERID = U.ID;
+
+update user set role = 'ROLE_ADMIN' where username = 'root';
+
+use spring;
