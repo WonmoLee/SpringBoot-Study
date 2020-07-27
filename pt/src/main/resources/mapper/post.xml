@@ -13,11 +13,19 @@
 	</select>
 	
 	<select id="findById" resultType="com.spring.pt.controller.dto.PostDetailRespDto">
-		SELECT P.ID, P.TITLE, P.CONTENT, U.USERNAME FROM POST P INNER JOIN USER U ON P.USERID = U.ID WHERE P.ID = #{ID}
+		SELECT P.ID, P.TITLE, P.CONTENT, U.USERNAME FROM POST P INNER JOIN USER U ON P.USERID = U.ID WHERE P.ID = #{id}
 	</select>
 	
 	<delete id="deleteById">
-		DELETE FROM POST WHERE ID = #{ID}
+		DELETE FROM POST WHERE ID = #{id}
 	</delete>
+	
+	<update id="update">
+		UPDATE POST SET TITLE = #{title}, CONTENT = #{content} WHERE ID = #{id}
+	</update>
+	
+	<select id="findOne" resultType="com.spring.pt.model.Post">
+		SELECT * FROM POST WHERE ID = #{id}
+	</select>
 	
 </mapper> 

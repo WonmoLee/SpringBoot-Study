@@ -4,7 +4,7 @@
 
 <%@ include file="../layout/header.jsp" %>
 
-<h1>index 페이지입니다.</h1>
+<h1>게시글 상세 페이지입니다.</h1>
 
 <div class="container">
   <h2>게시판 렛츠기릿</h2>
@@ -26,6 +26,7 @@
     	</tr>
     </tbody>
   </table>
+  <button id="btn-update" class="btn btn-primary">수정하기</button>
   <button id="btn-update-mode" class="btn btn-warning">수정</button>
   <button id="btn-delete" class="btn btn-danger">삭제</button>
 </div>

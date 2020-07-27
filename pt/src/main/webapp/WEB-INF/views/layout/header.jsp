@@ -18,7 +18,7 @@
 <body>
 
    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" href="/spring">LWM Blog</a>
+      <a class="navbar-brand" href="/posts">LWM Blog</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
          <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +29,7 @@
          
          	<c:choose>
          		<c:when test="${empty sessionScope.principal}">
-         			<li class="nav-item"><a class="nav-link" href="/auth/login">로그인</a></li>
+         			<li class="nav-item"><a class="nav-link" href="/auth/loginForm">로그인</a></li>
             		<li class="nav-item"><a class="nav-link" href="/auth/join">회원가입</a></li>
             	</c:when>
             	<c:otherwise>
