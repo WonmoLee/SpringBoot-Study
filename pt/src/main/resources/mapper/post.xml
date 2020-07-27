@@ -8,4 +8,16 @@
 		INSERT INTO POST(title, content, userId, createDate) VALUES(#{title}, #{content}, #{userId}, now())
 	</insert>
 	
+	<select id="findAll" resultType="com.spring.pt.model.Post">
+		SELECT ID, TITLE, CONTENT, USERID, CREATEDATE FROM POST ORDER BY ID DESC
+	</select>
+	
+	<select id="findById" resultType="com.spring.pt.controller.dto.PostDetailRespDto">
+		SELECT P.ID, P.TITLE, P.CONTENT, U.USERNAME FROM POST P INNER JOIN USER U ON P.USERID = U.ID WHERE P.ID = #{ID}
+	</select>
+	
+	<delete id="deleteById">
+		DELETE FROM POST WHERE ID = #{ID}
+	</delete>
+	
 </mapper> 

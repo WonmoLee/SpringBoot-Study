@@ -53,6 +53,7 @@ CREATE TABLE comment(
 
 select * from user;
 select * from post;
+SELECT P.ID, P.TITLE, P.CONTENT, U.USERNAME FROM POST P INNER JOIN USER U ON P.USERID = U.ID;
 
 update user set role = 'ROLE_ADMIN' where username = 'root';
 

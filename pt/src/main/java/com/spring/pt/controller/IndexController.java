@@ -10,10 +10,10 @@ public class IndexController {
 	
 	@GetMapping({"","/"})
 	public String index() {
-		return "index";
+		return "redirect:/posts";
 	}
 	
-	@GetMapping("/auth/login")
+	@GetMapping("/auth/loginForm")
 	public String loginForm() {
 		return "user/loginForm";
 	}

@@ -12,6 +12,12 @@ let index = {
 			console.log(this);
 			this.login();
 		});
+		
+		$("#btn-delete").on("click", ()=> {
+			//콜백 스택
+			console.log(this);
+			this.deleteById();
+		});
 	},
 	
 	save: function() {
@@ -35,6 +41,25 @@ let index = {
 			console.log(resp);
 		}).fail(function(error) {
 			alert("글쓰기 실패");
+			console.log(error);
+		})
+	},
+	
+	deleteById: function() {
+		let data = {
+				id: $("#id").val(),
+		};
+		
+		$.ajax({
+			type: "DELETE",
+			url: "/post/"+data.id,
+			dataType: "json"
+		}).done(function(resp) {
+			console.log(resp);
+			alert("삭제 성공");
+			location.href="/";
+		}).fail(function(error) {
+			alert("삭제 실패");
 			console.log(error);
 		})
 	},
