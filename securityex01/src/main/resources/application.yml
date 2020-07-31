@@ -18,3 +18,10 @@ spring:
     view:
       prefix: /templates/
       suffix: .mustache
+       
+  jpa:
+    hibernate:
+      ddl-auto: update #create update none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #mySQL의 전략은 언더바 전략인데 이걸 통해서 내가 쓴 커멜로 테이블에 적용할 수 있다.
+    show-sql: true
