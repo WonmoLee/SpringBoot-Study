@@ -6,3 +6,4 @@ GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
 create database security;
 use security;
 ```
+
