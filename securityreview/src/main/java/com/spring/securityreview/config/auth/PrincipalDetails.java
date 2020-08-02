@@ -60,6 +60,6 @@ public class PrincipalDetails implements UserDetails{
 		Collection<GrantedAuthority> authList = new ArrayList<>(); 
 		authList.add(new SimpleGrantedAuthority(user.getRole())); 
 		return authList;
-
+		
 	}
 }

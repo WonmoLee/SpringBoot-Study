@@ -1,35 +1,25 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=86546143e2938413aaa1074ba33730fce64cb3e6
 eclipse.preferences.version=1
-<<<<<<< HEAD
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=5
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=5
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=2
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=8
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=8
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mustache=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mybatis=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=3
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.thymeleaf=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=5
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=test
-=======
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.devtools=5
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.lombok=5
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mustache=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=3
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.security=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=5
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=securityex01
->>>>>>> 86546143e2938413aaa1074ba33730fce64cb3e6
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mybatis=3
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=6
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.oauth2-client=2
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.security=4
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.thymeleaf=3
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=8
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=naverOAuth
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=2.3.2.RELEASE
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Demo project for Spring Boot
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.practice
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=1.8
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-<<<<<<< HEAD
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=test
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.spring.test
-=======
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=securityex01
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.spring.securityex01
->>>>>>> 86546143e2938413aaa1074ba33730fce64cb3e6
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=naverOAuth
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.example.oauth2
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=0.0.1-SNAPSHOT
