@@ -2,18 +2,17 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.spring.pt.model.Account"/>
 <fullyQualifiedTypeName name="com.practice.demo.model.Member"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.HandlerInterceptor"/>
+=======
+>>>>>>> 0de82ae89bd4b2ee1c046b35157e8ead3bbd4a75
 <fullyQualifiedTypeName name="java.util.logging.Handler"/>
-<fullyQualifiedTypeName name="org.springframework.web.servlet.handler.HandlerInterceptorAdapter"/>
 <fullyQualifiedTypeName name="com.spring.pt.config.aop.SessionIntercepter"/>
 <fullyQualifiedTypeName name="com.spring.pt.config.aop.RoleIntercepter"/>
 <fullyQualifiedTypeName name="com.spring.pt.model.User"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="com.spring.pt.config.handler.exception.MyRoleException"/>
 <fullyQualifiedTypeName name="com.spring.pt.config.handler.exception.MySessionException"/>
@@ -25,10 +24,19 @@
 <fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
 <fullyQualifiedTypeName name="lombok.NonNull"/>
 <fullyQualifiedTypeName name="com.spring.pt.controller.dto.CommonRespDto"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.WebMvcConfigurer"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.HandlerInterceptor"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.handler.HandlerInterceptorAdapter"/>
+<fullyQualifiedTypeName name="com.spring.test.config.aop.SessionIntercepter"/>
+<fullyQualifiedTypeName name="com.spring.test.config.aop.RoleIntercepter"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.spring.test.config.handler.exception.MyRoleException"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity"/>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
 <fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
@@ -60,4 +68,18 @@
 <fullyQualifiedTypeName name="org.springframework.security.core.annotation.AuthenticationPrincipal"/>
 <fullyQualifiedTypeName name="java.security.Principal"/>
 <fullyQualifiedTypeName name="com.spring.securityex01.config.auth.PrincipalDetails"/>
+=======
+<fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity"/>
+<fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="java.sql.Timestamp"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="com.spring.securityreview.model.User"/>
+<fullyQualifiedTypeName name="lombok.Value"/>
+<fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+>>>>>>> 0de82ae89bd4b2ee1c046b35157e8ead3bbd4a75
 </qualifiedTypeNameHistroy>
