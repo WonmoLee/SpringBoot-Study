@@ -25,3 +25,14 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl #mySQL의 전략은 언더바 전략인데 이걸 통해서 내가 쓴 커멜로 테이블에 적용할 수 있다.
     show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google: #/oauth2/authorization/google 이 주소를 동작하게 한다.
+            client-id: 740538887829-2bjipgfp2mtv757l00kgaurm8scppeqi.apps.googleusercontent.com
+            client-secret: eWuKQ_Wxk9wTKjNUMyzzvAl-
+            scope:
+            - email
+            - profile    

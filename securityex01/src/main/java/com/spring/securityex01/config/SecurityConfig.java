@@ -8,6 +8,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.spring.securityex01.config.oauth.PrincipalOauth2UserService;
+
 @Configuration //IoC에 빈(Bean)을 등록
 @EnableWebSecurity //필터 체인 관리 시작 어노테이션
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true) //특정 주소 접근시 권한 및 인증을 위한 어노테이션 활성화
@@ -32,6 +34,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.formLogin()
 			.loginPage("/login")
 			.loginProcessingUrl("/loginProc")
-			.defaultSuccessUrl("/");
+			.defaultSuccessUrl("/")
+		.and()
+			.oauth2Login()
+			.loginPage("/login")
+			.userInfoEndpoint()
+			.userService(new PrincipalOauth2UserService());
 	}
 }
