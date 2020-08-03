@@ -1,8 +1,10 @@
 package com.spring.securityex01.config.auth;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.spring.securityex01.model.User;
@@ -55,7 +57,9 @@ public class PrincipalDetails implements UserDetails{
 	//계정 권한
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return null;
+		Collection<GrantedAuthority> authList = new ArrayList<>(); 
+		authList.add(new SimpleGrantedAuthority(user.getRole())); 
+		return authList;
 	}
 	
 }
