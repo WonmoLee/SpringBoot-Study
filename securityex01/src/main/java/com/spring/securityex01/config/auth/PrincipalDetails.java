@@ -5,16 +5,12 @@ import java.util.Collection;
 import java.util.Map;
 
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import com.spring.securityex01.model.User;
 
-import lombok.Data;
-
 //Authentication 객체에 저장할 수 있는 유일한 타입
-@Data
 public class PrincipalDetails implements UserDetails, OAuth2User{
 
 	private User user;
@@ -23,6 +19,12 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 	public PrincipalDetails(User user) {
 		super();
 		this.user = user;
+	}
+	
+	//OAuth2.0 로그인시 사용
+	public PrincipalDetails(User user, Map<String, Object> attributes) {
+		this.user = user;
+		this.attributes = attributes;
 	}
 	
 	@Override
@@ -60,8 +62,8 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 	//계정 권한
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		Collection<GrantedAuthority> authList = new ArrayList<>(); 
-		authList.add(new SimpleGrantedAuthority(user.getRole())); 
+		Collection<GrantedAuthority> authList = new ArrayList<GrantedAuthority>();
+		authList.add(()->{ return user.getRole();});
 		return authList;
 	}
 
@@ -73,7 +75,13 @@ public class PrincipalDetails implements UserDetails, OAuth2User{
 
 	@Override
 	public String getName() {
-		return "제공자 ID";
+		return user.getId() + "";
 	}
+
+	public User getUser() {
+		return user;
+	}
+	
+	
 	
 }
