@@ -1,10 +1,12 @@
 package com.lwm.jwtex01.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.lwm.jwtex01.config.jwt.JwtAuthenticationFilter;
 
@@ -12,6 +14,11 @@ import com.lwm.jwtex01.config.jwt.JwtAuthenticationFilter;
 @EnableWebSecurity //시큐리티 활성화 -> 기본 스프링 필터체인에 등록
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
+	@Bean
+	public BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
@@ -22,10 +29,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 			.formLogin().disable()
 			.httpBasic().disable()
 			.addFilter(new JwtAuthenticationFilter(authenticationManager()))
-			.addFilter(null)
+//			.addFilter(null)
 			.authorizeRequests()
 			.antMatchers("/api/v1/manager/**")
-				.access("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN')")
+				.access("hasRole('ROLE_MANAGER') or hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
 			.antMatchers("api/v1/admon/**")
 				.access("hasRole('ROLE_ADMIN')")
 			.anyRequest().permitAll();

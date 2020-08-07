@@ -2,11 +2,16 @@ package com.lwm.jwtex01.controller;
 
 import java.util.List;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lwm.jwtex01.model.User;
+import com.lwm.jwtex01.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
@@ -15,6 +20,9 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("api/v1")
 //@CrossOrigin //CORS허용
 public class RestApiController {
+	
+	private final UserRepository userRepository;
+	private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	//모든 사람이 접근 가능
 	@GetMapping("home")
@@ -33,5 +41,11 @@ public class RestApiController {
 	@GetMapping("admin/user")
 	public List<User> users() {
 		return null;
+	}
+	
+	@PostMapping("join")
+	public String join(@RequestBody User user) { 
+		user.setPassword(bCryptPasswordEncoder.encode(user));
+		
 	}
 }

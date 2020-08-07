@@ -1,6 +1,7 @@
 package com.lwm.jwtex01.config.jwt;
 
 import java.io.IOException;
+import java.util.Date;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -13,7 +14,10 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lwm.jwtex01.config.auth.PrincipalDetails;
 import com.lwm.jwtex01.dto.LoginRequestDto;
 
 import lombok.RequiredArgsConstructor;
@@ -24,6 +28,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 	private final AuthenticationManager authenticationManager;
 	
 	//Authentication 객체 만들어서 리턴 => 의존 : AuthenticationManager
+	//인증 요청시에 실행되는 함수 => /login
 	@Override
 	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
 			throws AuthenticationException {
@@ -43,7 +48,15 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 						loginRequestDto.getUsername(),
 						loginRequestDto.getPassword());
 		
-		//Authentication 객체는 UserDetailsService를 통해서 만들어진다.
+		//authenticate()함수가 호출되면 인증 프로바이더가 유저 디테일 서비스의
+		//loadUserByUsername(토큰의 첫번째 파라메터)를 호출하고
+		//UserDetails를 리턴받아서 토큰의 두번째 파라메터(credential)와
+		//userDetails(DB값)의 getPassword()함수로 비교해서 동일하면
+		//Authentication 객체를 만들어서 필터체인으로 리턴해준다.
+		
+		//Tip:인증 프로바이더의 디폴트 서비스는 UserDetailsService타입
+		//Tip:인증 프로바이터의 디폴트 암호화 방식은 BCryptPasswordEncoder
+		//결론은 인증 프로바이더에게 알려줄 필요가 없음.
 		Authentication authentication = 
 				authenticationManager.authenticate(authenticationToken);
 		
@@ -54,7 +67,16 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 	@Override
 	protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
 			Authentication authResult) throws IOException, ServletException {
-		// TODO Auto-generated method stub
+		
+		PrincipalDetails principalDetails = (PrincipalDetails) authResult.getPrincipal();
+		
+		String jwtToken = JWT.create()
+				.withSubject(principalDetails.getUsername())
+				.withExpiresAt(new Date(System.currentTimeMillis()+864000000))
+				.withClaim("id", principalDetails.getUser().getUsername())
+				.sign(Algorithm.HMAC512("이원모".getBytes()));
+		
+		response.addHeader("Authorization", "Be");
 		super.successfulAuthentication(request, response, chain, authResult);
 	}
 }
