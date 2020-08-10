@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.lwm.jwtex01.model.User;
 
+
 public class PrincipalDetails implements UserDetails{
 
 	private User user;
@@ -49,7 +50,7 @@ public class PrincipalDetails implements UserDetails{
     public boolean isEnabled() {
         return true;
     }
-
+    
 	@Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
 		Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
