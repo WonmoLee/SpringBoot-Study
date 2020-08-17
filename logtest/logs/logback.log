@@ -1,0 +1,9 @@
+[2020-08-17 14:27:51:9496][http-nio-8080-exec-1] WARN  c.l.l.config.aop.warn.BindingAdvice - com.lwm.logtest.controller.IndexController:user() 유저네임이 공백일 수 없습니다.
+[2020-08-17 14:27:51:9496][http-nio-8080-exec-1] WARN  c.l.l.config.aop.warn.BindingAdvice - com.lwm.logtest.controller.IndexController:user() 패스워드가 공백일 수 없습니다
+[2020-08-17 14:27:51:9496][http-nio-8080-exec-1] WARN  c.l.l.config.aop.warn.BindingAdvice - com.lwm.logtest.controller.IndexController:user() 이메일이 공백일 수 없습니다.
+[2020-08-17 14:31:02:200439][http-nio-8080-exec-2] ERROR c.l.l.config.aop.warn.BindingAdvice - 에러 찍허?
+[2020-08-17 14:31:02:200439][http-nio-8080-exec-2] WARN  c.l.l.config.aop.warn.BindingAdvice - com.lwm.logtest.controller.IndexController:user() 올바른 형식의 이메일 주소여야 합니다
+[2020-08-17 14:32:42:4922][http-nio-8080-exec-1] INFO  c.l.l.config.aop.warn.BindingAdvice - 나찍혀?
+[2020-08-17 14:32:42:4923][http-nio-8080-exec-1] DEBUG c.l.l.config.aop.warn.BindingAdvice - 디버그 찍혀?
+[2020-08-17 14:32:42:4923][http-nio-8080-exec-1] ERROR c.l.l.config.aop.warn.BindingAdvice - 에러 찍허?
+[2020-08-17 14:32:42:4923][http-nio-8080-exec-1] WARN  c.l.l.config.aop.warn.BindingAdvice - com.lwm.logtest.controller.IndexController:user() 올바른 형식의 이메일 주소여야 합니다
