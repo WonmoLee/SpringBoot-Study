@@ -1,6 +1,6 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=0de82ae89bd4b2ee1c046b35157e8ead3bbd4a75
+>>>>>>>=24a5edf6033b28613af8b6f392025e74f0e57766
 applyBackground=false
 approved.defs.file.last.changed.time=1594835793000
 configurationInstallLocation=/C\:/tools/sts-4.5.1.RELEASE/
@@ -8,12 +8,7 @@ eclipse.preferences.version=1
 iconcolormode=primary
 iconreplacement=false
 includeThemingInOomph=false
-<<<<<<< HEAD
-last.download.attempt.time=1598326529745
-lastConfiguration=1598326515565
-=======
 last.download.attempt.time=1598276445230
-lastConfiguration=1598276434882
->>>>>>> 24a5edf6033b28613af8b6f392025e74f0e57766
+lastConfiguration=1598494051669
 newinstall=true
 workbench.theme=Dark Gray
