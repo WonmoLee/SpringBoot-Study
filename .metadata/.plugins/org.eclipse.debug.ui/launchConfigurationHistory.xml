@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchHistory>
 <launchGroup id="org.eclipse.debug.ui.launchGroup.debug">
+<<<<<<< HEAD
 <mruHistory/>
+=======
+<mruHistory>
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;RuntimeLoad&quot;/&gt;&#13;&#10;"/>
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;IoCContainer&quot;/&gt;&#13;&#10;"/>
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;securityex01 - Securityex01Application&quot;/&gt;&#13;&#10;"/>
+</mruHistory>
+>>>>>>> 9bf59c071d33f17b3d3289ad11ecc8ba4746ab5d
 <favorites/>
 </launchGroup>
 <launchGroup id="org.eclipse.debug.ui.launchGroup.profile">
@@ -13,7 +21,15 @@
 <favorites/>
 </launchGroup>
 <launchGroup id="org.eclipse.debug.ui.launchGroup.run">
+<<<<<<< HEAD
 <mruHistory/>
+=======
+<mruHistory>
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;RuntimeLoad&quot;/&gt;&#13;&#10;"/>
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;IoCContainer&quot;/&gt;&#13;&#10;"/>
+<launch memento="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#13;&#10;&lt;launchConfiguration local=&quot;true&quot; path=&quot;securityex01 - Securityex01Application&quot;/&gt;&#13;&#10;"/>
+</mruHistory>
+>>>>>>> 9bf59c071d33f17b3d3289ad11ecc8ba4746ab5d
 <favorites/>
 </launchGroup>
 </launchHistory>
