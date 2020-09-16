@@ -1,10 +1,16 @@
 package com.spring.pt.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 public class TestController {
+	
+	@GetMapping("/test")
+	public String test() {
+		return "데이터입니다.";
+	}
 	
 	//인증필요
 	@GetMapping("/test/user/{id}")

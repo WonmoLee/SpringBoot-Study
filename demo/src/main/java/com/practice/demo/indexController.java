@@ -34,4 +34,5 @@ public class indexController {
 		System.out.println(email);
 		return "User";
 	}
+	
 }
